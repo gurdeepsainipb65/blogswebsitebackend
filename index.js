@@ -7,7 +7,7 @@ const user_router = require("./routes/user_router");
 
 const app = express();
 mongoose
-  .connect("mongodb://127.0.0.1:27017/blogs")
+  .connect("mongodb+srv://gurdeepsainig2001:1uIX4u1TFnHq05fU@cluster0.owdx5.mongodb.net/blogs")
   .then(() => {
     console.log("database connected");
   })
