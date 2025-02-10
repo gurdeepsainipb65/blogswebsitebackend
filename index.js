@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const blogs_router = require("./routes/blogs_router");
 const user_router = require("./routes/user_router");
@@ -16,7 +15,7 @@ mongoose
   });
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use("/api/blogs", blogs_router);
 app.use("/api/user",user_router);
