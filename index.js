@@ -7,6 +7,8 @@ const session = require("express-session");
 const passport = require("passport");
 require("./passportConfig.js");
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 app.use(
   session({
@@ -53,8 +55,6 @@ mongoose
     console.log(erro);
   });
 
-app.use(cors());
-app.use(express.json());
 
 app.use("/api/blogs", blogs_router);
 app.use("/api/user", user_router);
