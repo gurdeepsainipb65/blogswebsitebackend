@@ -32,8 +32,8 @@ user_router.post("/login", async (req, resp) => {
   if (!isMatch) {
     return resp.json({ message: "Invalid Credentials" });
   }
-  const token = await jwt.sign({ userId: user._id }, "mysecret12345");
-  return resp.json({access_token:token})
+  const token = await jwt.sign({ userId: user._id },"mysecret12345");
+  return resp.json({ access_token: token });
 });
 
 module.exports = user_router;

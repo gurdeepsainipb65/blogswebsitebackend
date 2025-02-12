@@ -1,7 +1,6 @@
 const express = require("express");
 const Blogs_router = express.Router();
 const Blogs = require("../models/blogs_models");
-const bodyParser = require("body-parser");
 
 Blogs_router.get("/", async (req, resp) => {
   const blogs = await Blogs.find();
