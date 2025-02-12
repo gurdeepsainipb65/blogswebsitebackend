@@ -6,7 +6,6 @@ const user_router = require("./routes/user_router");
 const session = require("express-session");
 const passport = require("passport");
 import "./passportConfig.js";
-
 const app = express();
 
 app.use(
