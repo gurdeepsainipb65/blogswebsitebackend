@@ -5,7 +5,7 @@ const blogs_router = require("./routes/blogs_router");
 const user_router = require("./routes/user_router");
 const session = require("express-session");
 const passport = require("passport");
-import "./passportConfig.js";
+require("./passportConfig.js");
 const app = express();
 
 app.use(
