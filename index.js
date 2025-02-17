@@ -8,7 +8,8 @@ const passport = require("passport");
 require("./passportConfig.js");
 
 // export const baseURL = "http://localhost:4000"
-export const baseURL = "https://blogswebsitebackend.onrender.com"
+const baseURL = "https://blogswebsitebackend.onrender.com"
+module.exports = baseURL
 
 const app = express();
 app.use(cors());
