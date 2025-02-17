@@ -8,7 +8,7 @@ Blogs_router.get("/", async (req, resp) => {
   resp.json({ blogs: blogs });
 });
 
-Blogs_router.post("/add",verifyToken, async (req, resp) => {
+Blogs_router.post("/add", verifyToken, async (req, resp) => {
   const { name, image, categary, description } = req.body;
   await Blogs.create({ name, image, categary, description, user: req.user.userId });
   resp.json({ success: "blogs created" });

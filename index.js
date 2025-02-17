@@ -5,11 +5,7 @@ const blogs_router = require("./routes/blogs_router");
 const user_router = require("./routes/user_router");
 const session = require("express-session");
 const passport = require("passport");
-require("./passportConfig.js");
-
-// export const baseURL = "http://localhost:4000"
-// const baseURL = "https://blogswebsitebackend.onrender.com"
-// module.exports = baseURL
+require("./passportConfig.js")
 
 const app = express();
 app.use(cors());
