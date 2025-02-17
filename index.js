@@ -32,7 +32,7 @@ app.get(
   "/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, resp) => {
-    resp.redirect("/dashboard"); // Redirect to dashboard after successful login
+    resp.redirect("https://blogswebsitefrontend.vercel.app/"); // Redirect to dashboard after successful login
   }
 );
 
