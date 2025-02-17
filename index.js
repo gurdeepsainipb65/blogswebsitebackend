@@ -6,6 +6,10 @@ const user_router = require("./routes/user_router");
 const session = require("express-session");
 const passport = require("passport");
 require("./passportConfig.js");
+
+// export const baseURL = "http://localhost:4000"
+export const baseURL = "https://blogswebsitebackend.onrender.com"
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -32,7 +36,7 @@ app.get(
   "/auth/google/callback",
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, resp) => {
-    resp.redirect("https://blogswebsitefrontend.vercel.app/"); // Redirect to dashboard after successful login
+    resp.redirect(baseURL); // Redirect to dashboard after successful login
   }
 );
 
