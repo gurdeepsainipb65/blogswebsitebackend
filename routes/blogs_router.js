@@ -2,7 +2,7 @@ const express = require("express");
 const Blogs_router = express.Router();
 const Blogs = require("../models/blogs_models");
 const jwt = require("jsonwebtoken");
-const blogs = require("../models/blogs_models");
+
 
 function verifyToken(req, resp, next) {
   const token = req.headers.authorization;
