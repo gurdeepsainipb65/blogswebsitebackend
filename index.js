@@ -8,10 +8,7 @@ const passport = require("passport");
 const axios =require("axios")
 require("./passportConfig.js");
 const app = express();
-app.use( cors({
-  origin: "https://blogswebsitefrontend.vercel.app", // Change to your frontend URL
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use(
