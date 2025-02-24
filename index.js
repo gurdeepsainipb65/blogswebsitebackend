@@ -5,7 +5,7 @@ const blogs_router = require("./routes/blogs_router");
 const user_router = require("./routes/user_router");
 const session = require("express-session");
 const passport = require("passport");
-const axios =require("axios")
+
 require("./passportConfig.js");
 const app = express();
 app.use(cors());
@@ -58,13 +58,6 @@ mongoose
 
 app.use("/api/blogs", blogs_router);
 app.use("/api/user", user_router);
-
-setInterval(() => {
-  axios
-    .get("https://blogswebsitebackend.onrender.com")
-    .then(() => console.log("🔄 Keep-alive ping sent"))
-    .catch((err) => console.error("⚠️ Keep-alive ping failed:", err));
-}, 300000);
 
 app.listen(4000, () => {
   console.log("App running at http://localhost:4000");
