@@ -9,9 +9,14 @@ function verifyToken(req, resp, next) {
   if (!token) {
     return resp.json({ success: false, message: "Access Denied" });
   }
-  const data = jwt.verify(token, "mysecret12345");
-  req.user = data;
-  next();
+  try {
+    const data = jwt.verify(token, "mysecret12345");
+    req.user = data;
+    next();
+  } 
+  catch(err){
+    console.log(err)
+  }
 };
 
 Blogs_router.get("/", async (req, resp) => {
